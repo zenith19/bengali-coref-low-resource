@@ -1,0 +1,559 @@
+{
+  "random_seed": 42,
+  "creation_date": "2024-12-09",
+  "bencoref_total": 122,
+  "transmucores_total": 100,
+  "bencoref_stratification": {
+    "biography": {
+      "total": 17,
+      "train": 6,
+      "dev": 1,
+      "test": 10,
+      "train_ids": [
+        "train_008",
+        "train_011",
+        "train_006",
+        "train_007",
+        "train_016",
+        "train_015"
+      ],
+      "dev_ids": [
+        "train_014"
+      ],
+      "test_ids": [
+        "train_010",
+        "train_009",
+        "train_002",
+        "train_003",
+        "train_013",
+        "train_017",
+        "train_005",
+        "train_012",
+        "train_001",
+        "train_004"
+      ]
+    },
+    "descriptive": {
+      "total": 36,
+      "train": 12,
+      "dev": 3,
+      "test": 21,
+      "train_ids": [
+        "train_020",
+        "train_039",
+        "train_052",
+        "train_048",
+        "train_037",
+        "train_033",
+        "train_034",
+        "train_049",
+        "train_046",
+        "train_027",
+        "train_029",
+        "train_041"
+      ],
+      "dev_ids": [
+        "train_047",
+        "train_035",
+        "train_051"
+      ],
+      "test_ids": [
+        "train_021",
+        "train_038",
+        "train_024",
+        "train_022",
+        "train_045",
+        "train_028",
+        "train_031",
+        "train_040",
+        "train_023",
+        "train_042",
+        "train_018",
+        "train_043",
+        "train_026",
+        "train_036",
+        "train_053",
+        "train_025",
+        "train_044",
+        "train_030",
+        "train_019",
+        "train_050",
+        "train_032"
+      ]
+    },
+    "novel": {
+      "total": 13,
+      "train": 4,
+      "dev": 1,
+      "test": 8,
+      "train_ids": [
+        "train_056",
+        "train_065",
+        "train_061",
+        "train_055"
+      ],
+      "dev_ids": [
+        "train_060"
+      ],
+      "test_ids": [
+        "train_054",
+        "train_066",
+        "train_057",
+        "train_059",
+        "train_063",
+        "train_064",
+        "train_058",
+        "train_062"
+      ]
+    },
+    "story": {
+      "total": 56,
+      "train": 19,
+      "dev": 5,
+      "test": 32,
+      "train_ids": [
+        "train_076",
+        "train_067",
+        "train_113",
+        "train_098",
+        "train_087",
+        "train_097",
+        "train_072",
+        "train_111",
+        "train_070",
+        "train_078",
+        "train_116",
+        "train_086",
+        "train_095",
+        "train_099",
+        "train_083",
+        "train_103",
+        "train_085",
+        "train_112",
+        "train_120"
+      ],
+      "dev_ids": [
+        "train_069",
+        "train_075",
+        "train_079",
+        "train_104",
+        "train_092"
+      ],
+      "test_ids": [
+        "train_074",
+        "train_068",
+        "train_094",
+        "train_100",
+        "train_093",
+        "train_102",
+        "train_088",
+        "train_122",
+        "train_110",
+        "train_119",
+        "train_117",
+        "train_106",
+        "train_082",
+        "train_101",
+        "train_114",
+        "train_105",
+        "train_071",
+        "train_108",
+        "train_118",
+        "train_109",
+        "train_080",
+        "train_089",
+        "train_115",
+        "train_077",
+        "train_090",
+        "train_107",
+        "train_096",
+        "train_084",
+        "train_091",
+        "train_073",
+        "train_081",
+        "train_121"
+      ]
+    }
+  },
+  "experiments": {
+    "experiment_1": {
+      "name": "Mixed Bengali Datasets (TransMuCoRes + BenCoref)",
+      "train": {
+        "total": 141,
+        "transmucores": 100,
+        "bencoref": 41
+      },
+      "dev": {
+        "total": 10,
+        "bencoref": 10
+      },
+      "test": {
+        "total": 71,
+        "bencoref": 71
+      },
+      "status": "complete"
+    },
+    "experiment_2": {
+      "name": "BenCoref Only (Baseline)",
+      "train": {
+        "total": 41,
+        "bencoref": 41
+      },
+      "dev": {
+        "total": 10,
+        "bencoref": 10
+      },
+      "test": {
+        "total": 71,
+        "bencoref": 71
+      },
+      "status": "complete"
+    },
+    "experiment_3": {
+      "name": "Back-translated BenCoref Augmentation",
+      "train": {
+        "total": 82,
+        "bencoref": 41,
+        "backtranslated_bencoref": 41
+      },
+      "dev": {
+        "total": 10,
+        "bencoref": 10
+      },
+      "test": {
+        "total": 71,
+        "bencoref": 71
+      },
+      "status": "complete",
+      "note": "Back-translate the 41 BenCoref training docs"
+    },
+    "experiment_4": {
+      "name": "Paraphrased BenCoref Augmentation",
+      "train": {
+        "total": 82,
+        "bencoref": 41,
+        "paraphrased_bencoref": 41
+      },
+      "dev": {
+        "total": 10,
+        "bencoref": 10
+      },
+      "test": {
+        "total": 71,
+        "bencoref": 71
+      },
+      "status": "complete",
+      "note": "Paraphrase the 41 BenCoref training docs"
+    },
+    "experiment_5": {
+      "name": "Back-translated Full Dataset Augmentation",
+      "train": {
+        "total": 282,
+        "transmucores": 100,
+        "bencoref": 41,
+        "backtranslated": 141
+      },
+      "dev": {
+        "total": 10,
+        "bencoref": 10
+      },
+      "test": {
+        "total": 71,
+        "bencoref": 71
+      },
+      "status": "complete",
+      "note": "Back-translate 100 TransMuCoRes + 41 BenCoref training docs"
+    },
+    "experiment_6": {
+      "name": "Paraphrased Full Dataset Augmentation",
+      "train": {
+        "total": 282,
+        "transmucores": 100,
+        "bencoref": 41,
+        "paraphrased": 141
+      },
+      "dev": {
+        "total": 10,
+        "bencoref": 10
+      },
+      "test": {
+        "total": 71,
+        "bencoref": 71
+      },
+      "status": "complete",
+      "note": "Paraphrase 100 TransMuCoRes + 41 BenCoref training docs"
+    }
+  },
+  "document_ids": {
+    "shared_across_all_experiments": {
+      "train_bencoref_41": [
+        "train_008",
+        "train_011",
+        "train_006",
+        "train_007",
+        "train_016",
+        "train_015",
+        "train_020",
+        "train_039",
+        "train_052",
+        "train_048",
+        "train_037",
+        "train_033",
+        "train_034",
+        "train_049",
+        "train_046",
+        "train_027",
+        "train_029",
+        "train_041",
+        "train_056",
+        "train_065",
+        "train_061",
+        "train_055",
+        "train_076",
+        "train_067",
+        "train_113",
+        "train_098",
+        "train_087",
+        "train_097",
+        "train_072",
+        "train_111",
+        "train_070",
+        "train_078",
+        "train_116",
+        "train_086",
+        "train_095",
+        "train_099",
+        "train_083",
+        "train_103",
+        "train_085",
+        "train_112",
+        "train_120"
+      ],
+      "dev_10": [
+        "train_014",
+        "train_047",
+        "train_035",
+        "train_051",
+        "train_060",
+        "train_069",
+        "train_075",
+        "train_079",
+        "train_104",
+        "train_092"
+      ],
+      "test_71": [
+        "train_010",
+        "train_009",
+        "train_002",
+        "train_003",
+        "train_013",
+        "train_017",
+        "train_005",
+        "train_012",
+        "train_001",
+        "train_004",
+        "train_021",
+        "train_038",
+        "train_024",
+        "train_022",
+        "train_045",
+        "train_028",
+        "train_031",
+        "train_040",
+        "train_023",
+        "train_042",
+        "train_018",
+        "train_043",
+        "train_026",
+        "train_036",
+        "train_053",
+        "train_025",
+        "train_044",
+        "train_030",
+        "train_019",
+        "train_050",
+        "train_032",
+        "train_054",
+        "train_066",
+        "train_057",
+        "train_059",
+        "train_063",
+        "train_064",
+        "train_058",
+        "train_062",
+        "train_074",
+        "train_068",
+        "train_094",
+        "train_100",
+        "train_093",
+        "train_102",
+        "train_088",
+        "train_122",
+        "train_110",
+        "train_119",
+        "train_117",
+        "train_106",
+        "train_082",
+        "train_101",
+        "train_114",
+        "train_105",
+        "train_071",
+        "train_108",
+        "train_118",
+        "train_109",
+        "train_080",
+        "train_089",
+        "train_115",
+        "train_077",
+        "train_090",
+        "train_107",
+        "train_096",
+        "train_084",
+        "train_091",
+        "train_073",
+        "train_081",
+        "train_121"
+      ]
+    },
+    "experiment_1_5_6": {
+      "train_transmucores_100": [
+        "105_persuasion_brat_ben_Beng",
+        "1064_the_masque_of_the_red_death_brat_ben_Beng",
+        "110_tess_of_the_durbervilles_a_pure_woman_brat_ben_Beng",
+        "113_the_secret_garden_brat_ben_Beng",
+        "11_alices_adventures_in_wonderland_brat_ben_Beng",
+        "120_treasure_island_brat_ben_Beng",
+        "1245_night_and_day_brat_ben_Beng",
+        "12677_personality_plus_some_experiences_of_emma_mcchesney_and_her_son_jock_brat_ben_Beng",
+        "1342_pride_and_prejudice_brat_ben_Beng",
+        "1400_great_expectations_brat_ben_Beng",
+        "145_middlemarch_brat_ben_Beng",
+        "155_the_moonstone_brat_ben_Beng",
+        "158_emma_brat_ben_Beng",
+        "16357_mary_a_fiction_brat_ben_Beng",
+        "1661_the_adventures_of_sherlock_holmes_brat_ben_Beng",
+        "1695_the_man_who_was_thursday_a_nightmare_brat_ben_Beng",
+        "171_charlotte_temple_brat_ben_Beng",
+        "174_the_picture_of_dorian_gray_brat_ben_Beng",
+        "18581_adrift_in_new_york_tom_and_florence_braving_the_world_brat_ben_Beng",
+        "2005_piccadilly_jim_brat_ben_Beng",
+        "2084_the_way_of_all_flesh_brat_ben_Beng",
+        "208_daisy_miller_a_study_brat_ben_Beng",
+        "2095_clotelle_a_tale_of_the_southern_states_brat_ben_Beng",
+        "215_the_call_of_the_wild_brat_ben_Beng",
+        "2166_king_solomons_mines_brat_ben_Beng",
+        "219_heart_of_darkness_brat_ben_Beng",
+        "233_sister_carrie_a_novel_brat_ben_Beng",
+        "238_dear_enemy_brat_ben_Beng",
+        "2489_moby_dick_brat_ben_Beng",
+        "24_o_pioneers_brat_ben_Beng",
+        "271_black_beauty_brat_ben_Beng",
+        "2807_to_have_and_to_hold_brat_ben_Beng",
+        "2814_dubliners_brat_ben_Beng",
+        "2852_the_hound_of_the_baskervilles_brat_ben_Beng",
+        "2891_howards_end_brat_ben_Beng",
+        "32_herland_brat_ben_Beng",
+        "33_the_scarlet_letter_brat_ben_Beng",
+        "3457_the_man_of_the_forest_brat_ben_Beng",
+        "351_of_human_bondage_brat_ben_Beng",
+        "367_country_of_the_pointed_firs_brat_ben_Beng",
+        "4051_lady_bridget_in_the_nevernever_land_a_story_of_australian_life_brat_ben_Beng",
+        "41_the_legend_of_sleepy_hollow_brat_ben_Beng",
+        "4217_a_portrait_of_the_artist_as_a_young_man_brat_ben_Beng",
+        "4276_north_and_south_brat_ben_Beng",
+        "4300_ulysses_brat_ben_Beng",
+        "432_the_ambassadors_brat_ben_Beng",
+        "434_the_circular_staircase_brat_ben_Beng",
+        "44_the_song_of_the_lark_brat_ben_Beng",
+        "45_anne_of_green_gables_brat_ben_Beng",
+        "472_the_house_behind_the_cedars_brat_ben_Beng",
+        "502_desert_gold_brat_ben_Beng",
+        "521_the_life_and_adventures_of_robinson_crusoe_brat_ben_Beng",
+        "5230_the_invisible_man_a_grotesque_romance_brat_ben_Beng",
+        "541_the_age_of_innocence_brat_ben_Beng",
+        "543_main_street_brat_ben_Beng",
+        "550_silas_marner_brat_ben_Beng",
+        "599_vanity_fair_brat_ben_Beng",
+        "60_the_scarlet_pimpernel_brat_ben_Beng",
+        "62_a_princess_of_mars_brat_ben_Beng",
+        "711_allan_quatermain_brat_ben_Beng",
+        "730_oliver_twist_brat_ben_Beng",
+        "73_the_red_badge_of_courage_an_episode_of_the_american_civil_war_brat_ben_Beng",
+        "74_the_adventures_of_tom_sawyer_brat_ben_Beng",
+        "766_david_copperfield_brat_ben_Beng",
+        "768_wuthering_heights_brat_ben_Beng",
+        "77_the_house_of_the_seven_gables_brat_ben_Beng",
+        "84_frankenstein_or_the_modern_prometheus_brat_ben_Beng",
+        "8867_the_magnificent_ambersons_brat_ben_Beng",
+        "940_the_last_of_the_mohicans_a_narrative_of_1757_brat_ben_Beng",
+        "95_the_prisoner_of_zenda_brat_ben_Beng",
+        "1023_bleak_house_brat_ben_Beng",
+        "1206_the_flying_u_ranch_brat_ben_Beng",
+        "2641_a_room_with_a_view_brat_ben_Beng",
+        "36_the_war_of_the_worlds_brat_ben_Beng",
+        "41286_miss_marjoribanks_brat_ben_Beng",
+        "6053_evelina_or_the_history_of_a_young_ladys_entrance_into_the_world_brat_ben_Beng",
+        "6593_history_of_tom_jones_a_foundling_brat_ben_Beng",
+        "876_life_in_the_ironmills_or_the_korl_woman_brat_ben_Beng",
+        "932_the_fall_of_the_house_of_usher_brat_ben_Beng",
+        "969_the_tenant_of_wildfell_hall_brat_ben_Beng",
+        "11231_bartleby_the_scrivener_a_story_of_wallstreet_brat_ben_Beng",
+        "1155_the_secret_adversary_brat_ben_Beng",
+        "1260_jane_eyre_an_autobiography_brat_ben_Beng",
+        "1327_elizabeth_and_her_german_garden_brat_ben_Beng",
+        "15265_the_quest_of_the_silver_fleece_a_novel_brat_ben_Beng",
+        "160_the_awakening_and_selected_short_stories_brat_ben_Beng",
+        "209_the_turn_of_the_screw_brat_ben_Beng",
+        "217_sons_and_lovers_brat_ben_Beng",
+        "2775_the_good_soldier_brat_ben_Beng",
+        "27_far_from_the_madding_crowd_brat_ben_Beng",
+        "3268_the_mysteries_of_udolpho_brat_ben_Beng",
+        "345_dracula_brat_ben_Beng",
+        "514_little_women_brat_ben_Beng",
+        "5348_ragged_dick_or_street_life_in_new_york_with_the_bootblacks_brat_ben_Beng",
+        "76_adventures_of_huckleberry_finn_brat_ben_Beng",
+        "78_tarzan_of_the_apes_brat_ben_Beng",
+        "805_this_side_of_paradise_brat_ben_Beng",
+        "829_gullivers_travels_into_several_remote_nations_of_the_world_brat_ben_Beng",
+        "974_the_secret_agent_a_simple_tale_brat_ben_Beng",
+        "9830_the_beautiful_and_damned_brat_ben_Beng"
+      ]
+    }
+  },
+  "summary": {
+    "total_experiments": 6,
+    "completed": 6,
+    "awaiting_augmentation": 0,
+    "common_dev_test": "All experiments share the same dev (10 docs) and test (71 docs) sets"
+  },
+  "augmentation": {
+    "creation_date": "2025-12-11 11:24:20",
+    "methods": {
+      "back_translation": {
+        "tool": "Google Translate (googletrans 4.0.0rc1)",
+        "strategy": "Bengali → English → Bengali",
+        "notes": "Rate-limited to avoid blocking. ~0.6s per sentence."
+      },
+      "paraphrasing": {
+        "tool": "BanglaBERT MLM (csebuetnlp/banglabert)",
+        "strategy": "Mask 20% of tokens, predict with top-k sampling",
+        "mask_probability": 0.2,
+        "top_k": 10
+      }
+    },
+    "statistics": {
+      "bencoref_bt": 41,
+      "bencoref_para": 41,
+      "transmucores_bt": 100,
+      "transmucores_para": 100,
+      "total_augmented": 282
+    },
+    "time_taken": {
+      "bencoref_bt": "~41 minutes",
+      "bencoref_para": "~0.5 minutes",
+      "transmucores_bt": "~282 minutes",
+      "transmucores_para": "~2 minutes",
+      "total": "~5.5 hours"
+    }
+  }
+}
