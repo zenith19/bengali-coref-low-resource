@@ -6,7 +6,7 @@ This repository contains the experimental code for the master's thesis:
 >
 > Zenith Biswas, Saarland University, 2026
 >
-> Supervised by Andrew Dyer (M.A.) · Referees: Jun.-Prof. Dr. Annemarie Verkerk, Prof. Dr. Michael Hahn
+> Supervised by Andrew Dyer (M.A.) · Referees: Prof. Dr. Annemarie Verkerk, Prof. Dr. Michael Hahn
 
 ## Overview
 
