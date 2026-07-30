@@ -8,6 +8,12 @@ This repository contains the experimental code for the master's thesis:
 >
 > Supervised by Andrew Dyer (M.A.) · Referees: Prof. Dr. Annemarie Verkerk, Prof. Dr. Michael Hahn
 
+It also accompanies the peer-reviewed paper:
+
+> **Quality over Quantity: Rethinking Data and Model Assumptions for Bengali Coreference Resolution**
+>
+> Zenith Biswas and Andrew Thomas Dyer. KONVENS 2026 (oral presentation).
+
 ## Overview
 
 This thesis systematically investigates transformer-based approaches to Bengali coreference resolution — the task of identifying all expressions that refer to the same entity. Bengali, despite having 250 million speakers, has very limited NLP resources for this task.
@@ -23,9 +29,9 @@ This thesis systematically investigates transformer-based approaches to Bengali 
 
 All experiments use a **frozen encoder** approach:
 
-1. **Frozen pre-trained transformer** extracts 2304-dimensional span embeddings `[h_start; h_end; h_mean]`
-2. **Pairwise features** are constructed by concatenating embeddings with element-wise product and absolute difference (9216 dimensions)
-3. **Trainable MLP classifier** (`9216 → 512 → 256 → 1`, ~4.85M parameters) predicts coreference scores
+1. **Frozen pre-trained transformer** extracts span embeddings `[h_start; h_end; h_mean]` (2304–3456 dim depending on encoder)
+2. **Pairwise features** are constructed by concatenating embeddings with element-wise product and absolute difference (9216–13824 dim)
+3. **Trainable MLP classifier** (`[12·d] → 512 → 256 → 1`, ~4.85M parameters for 768-dim encoders, ~6.4M for 1024-dim, ~7.2M for 1152-dim) predicts coreference scores
 4. **Graph-based connected components** clustering forms final coreference chains
 
 ## Models
@@ -34,7 +40,7 @@ All experiments use a **frozen encoder** approach:
 |-------|----------|----------------|
 | MuRIL-Large | Indic-focused | `google/muril-large-cased` |
 | mBERT | Multilingual | `bert-base-multilingual-cased` |
-| RemBERT | Low-resource multilingual | `google/rembert` |
+| RemBERT | Multilingual | `google/rembert` |
 | BanglaBERT-Base | Bengali-specific | `csebuetnlp/banglabert` |
 | BERT-Base-Uncased | Control baseline | `bert-base-uncased` |
 
@@ -134,6 +140,17 @@ All experiments report **CoNLL F1**, the average of three standard coreference m
 ## Citation
 
 If you use this code, please cite:
+
+```bibtex
+@inproceedings{biswas2026quality,
+  title={Quality over Quantity: Rethinking Data and Model Assumptions for Bengali Coreference Resolution},
+  author={Biswas, Zenith and Dyer, Andrew Thomas},
+  booktitle={Proceedings of KONVENS 2026},
+  year={2026}
+}
+```
+
+The repository is also based on the underlying thesis:
 
 ```bibtex
 @mastersthesis{biswas2026bengali,
