@@ -1,4 +1,5 @@
 # Bengali Coreference Resolution under Low-Resource Constraints
+[![arXiv](https://img.shields.io/badge/arXiv-2610.35114-b31b1b.svg)](https://arxiv.org/abs/2610.35114)
 
 Bengali has over 250 million speakers and one gold-standard coreference dataset. This repository tests what actually happens when you apply the standard low-resource toolkit (more data, augmentation, cross-lingual transfer, multilingual encoders) on a span-sensitive task. Three common assumptions did not survive:
 
@@ -8,7 +9,8 @@ Bengali has over 250 million speakers and one gold-standard coreference dataset.
 
 Best result: **66.73 CoNLL F1** (MuRIL-Large, frozen encoder, 41 gold training documents).
 
-📄 **Paper:** Quality over Quantity: Rethinking Data and Model Assumptions for Bengali Coreference Resolution. Zenith Biswas and Andrew Thomas Dyer. KONVENS 2026 (oral presentation).
+📄 **Paper:** [Quality over Quantity: Rethinking Data and Model Assumptions for Bengali Coreference Resolution](https://arxiv.org/abs/2610.35114). Zenith Biswas and Andrew Thomas Dyer. KONVENS 2026 (oral presentation). arXiv:2610.35114.
+
 🎓 **Thesis:** Developing Deep Learning Models for Coreference Resolution in Bengali. Saarland University, 2026. Supervised by Andrew Dyer (M.A.); referees Prof. Dr. Annemarie Verkerk and Prof. Dr. Michael Hahn.
 
 ## Results
@@ -213,7 +215,11 @@ If you use this code, please cite:
   title={Quality over Quantity: Rethinking Data and Model Assumptions for Bengali Coreference Resolution},
   author={Biswas, Zenith and Dyer, Andrew Thomas},
   booktitle={Proceedings of KONVENS 2026},
-  year={2026}
+  year={2026},
+  eprint={2610.35114},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2610.35114}
 }
 ```
 
